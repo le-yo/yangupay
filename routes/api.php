@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/ussd', 'UssdController@app');
+Route::post('/stk/initiate', 'StkController@initiateRequest')->name('stk.initiateRequest');
+Route::post('/stk/checkTransaction', 'StkController@checkTransaction')->name('stk.checkTransaction');
